@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <title>Contador de Palabras - Otros Projectos</title>
+        <link rel="icon" type="image/png" href="/imgs/favicon.png">
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="/styles/styContPals.css">
+    </head>
+
+    <body>
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="navRetBttn"><div class="navRetBttnB"><a href="/index.html"><button class="navButt"> Regresar a la Página Principal </button></a></div></div>
+            <div class="navRetBttn"><div class="navRetBttnB"><a href="/pages/sP.html"><button class="navButt"> Regresar a Otros Projectos </button></a></div></div>
+            <div class="navText">Contador de Palabras</div>
+            <div class="webMobCont"><img class="webMobileLogo" src="/imgs/logoWhite.png" alt="Logo"/></div>
+            <div class="darkmodeCont">
+                <button class="darkmodeBttn" onclick="darkMode()" onmouseenter="DkHover()" onmouseleave="DkNoHov()">
+                    <img class="DkMdImg" src="../../imgs/DarkLight.png" alt="light mode"/>
+                </button>
+            </div>
+        </nav>
+
+
+
+        <!-- Word Counter -->
+        <div class="cont0">
+            <div class="cont1">
+                <textarea class="textCont" onkeyup="countingWords()" onpaste="countingWords()"></textarea>
+                <div class="wordCount">
+                    <button class="wordBttn">Clear text</button>
+                    <div id="words">Words: 00</div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footerLogosContainer">
+                <a href="../../index.html" target="_self" class="logoFooter"><img src="../../imgs/logoWhite.png" alt="logo" id="LogoFooter"/></a>
+                <div class="footerSocials">
+                    <div>
+                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="../../imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
+                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="../../imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="FaviconLogos">Íconos por <a href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
+        </footer>
+
+        <!-- Load external JavaScript -->
+        <script src="/scripts/scrContPals.js"></script>
+    </body>
+
+</html>
+
+
