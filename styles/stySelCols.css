@@ -1,0 +1,296 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+.nav {
+  position: sticky;
+  top: 0px;
+  z-index: 900;
+
+  height: 75px;
+
+  color: white;
+  border-bottom: 5px solid black;
+  text-align: justify;
+  background-color: rgb(10, 50, 150);
+  font-size: 25px;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 150px 150px auto 75px;
+}
+.navRetBttn {
+  width: 125px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.navRetBttnB {
+  width: 125px;
+  height: 80%;
+}
+.navButt {
+  width: 100%;
+  height: 100%;
+  /*Text*/
+  font-size: 15px;
+  text-align: center;
+  /*Others*/
+  background: black;
+  border-radius: 5px;
+  border: 2px solid rgb(100, 250, 250);
+  color: rgb(100, 250, 250);
+  cursor: pointer;
+}
+.navButt:hover{
+  border-color: white;
+}
+.navText {
+
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  place-items: center start;
+}
+.webMobCont {
+  display: grid;
+  place-items: center;
+}
+.darkmodeCont{
+  height: 100%;
+  width: 40px;
+  place-self: center right;
+
+  display: grid;
+  place-items: center;
+}
+.DkMdImg {
+  height: 20px;
+  width: 20px;
+}
+.darkmodeBttn {
+  height: 40px;
+  width: 100%;
+  background: none;
+  border: 2px solid rgb(100, 250, 250);
+
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.darkmodeBttn:hover {
+  cursor: pointer;
+}
+
+
+
+.subtitle {
+  height: 75px;
+  display: grid;
+  align-content: center;
+
+  text-align: center;
+  font-size: 15px;
+  border: 2px solid white;
+}
+#baseplate {
+  height: 400px;
+  background-color: rgb(75, 25, 25);
+  border: 2px solid white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+
+
+.colorSelContainerA {
+  display: grid;
+  place-items: center;
+  margin-bottom: 25px;
+}
+.colorSelContainerB {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 100px;
+}
+.colorSelector {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+
+  border-bottom: 5px solid white;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  text-align: center;
+}
+.colorSelContainerC {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 150px;
+  margin-top: 15px;
+}
+.colorSelContainerC > input {
+  width: 75px;
+  border-color: white;
+  text-align: center;
+}
+.colorSelContainerC .main {
+  height: 150px;
+  display: grid;
+  place-items: center;
+}
+.main > input {
+  border: none;
+  height: 100px;
+  width: 100%;
+}
+.colorSelector > button {
+  height: 50px;
+  width: 150px;
+  position: relative;
+  bottom: -35px;
+
+  border: 2px solid green;
+}
+.colorSelector > button:hover {
+  cursor: pointer;
+  border-color: greenyellow;
+}
+
+
+
+.footer {
+  height: 120px;
+
+  border-top: 5px solid black;
+  text-align: center;
+}
+.footerLogosContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.logoFooter {
+  grid-column: 1;
+  float: left;
+  position: relative;
+  left: 25px;
+  width: 50px;
+}
+.logoFooter:hover{
+  cursor: pointer;
+}
+#LogoFooter {
+  float: left;
+}
+.footerSocials  {
+  float: right;
+  height: 75px;
+  margin-right: 50px;
+
+  display: grid;
+  place-items: center right;
+}
+.socialsLogos {
+  height: 25px;
+  width: 25px;
+}
+.socialsLogos:hover {
+  cursor: pointer;
+}
+.FaviconLogos {
+  width: 200px;
+  margin-left: 25px;
+}
+.FaviconLogos>a {
+  color: rgb(175, 175, 250);
+}
+
+
+
+
+
+/* MEDIAS MEDIAS MEDIAS */
+/* up to 1023px */
+@media (max-width: 1023px) {
+  .title {
+    height: auto;
+    font-size: 25px;
+  }
+  #baseplate {
+    height: 300px;
+  }
+  .colorSelContainerB {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .RGB {
+    display: none;
+  }
+  .colorSelector {
+    height: 200px;
+  }
+  .colorSelector > button {
+    bottom: 0px;
+  }
+  .colorSelContainerC {
+    margin-top: -25px;
+  }
+  .Hex {
+    display: none;
+  }
+}
+/*TABLET (615px - 768px)*/
+@media (max-width: 768px) and (min-width: 615px) {
+}
+/* 615px ++ */
+@media (min-width: 615px) {
+  .webMobCont {
+    display: none;
+  }
+}
+/* MOBILE - 614px */
+@media (max-width: 614px) {
+  .nav {
+    background-color: rgb(10, 50, 150);
+    border: none;
+    border-bottom: 5px solid black;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .webMobCont {
+    display: block;
+  }
+  .webMobileLogo {
+    height: 75px;
+  }
+  .darkmodeCont {
+    display: none;
+  }
+  .navButt {
+    position: fixed;
+    visibility: hidden;
+  }
+  .navText {
+    display: none;
+  }
+  .navRetBttn {
+    display: none;
+  }
+  .footer {
+    height: 120px;
+  }
+}

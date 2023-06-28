@@ -1,0 +1,229 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+.nav {
+  position: sticky;
+  top: 0px;
+  z-index: 900;
+
+  height: 75px;
+
+  color: white;
+  border-bottom: 5px solid black;
+  text-align: justify;
+  background-color: rgb(10, 50, 150);
+  font-size: 25px;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 150px 150px auto 75px;
+}
+.navRetBttn {
+  width: 125px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.navRetBttnB {
+  width: 125px;
+  height: 80%;
+}
+.navButt {
+  width: 100%;
+  height: 100%;
+  /*Text*/
+  font-size: 15px;
+  text-align: center;
+  /*Others*/
+  background: black;
+  border-radius: 5px;
+  border: 2px solid rgb(100, 250, 250);
+  color: rgb(100, 250, 250);
+  cursor: pointer;
+}
+.navButt:hover{
+  border-color: white;
+}
+.navText {
+
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  place-items: center start;
+}
+.webMobCont {
+  display: grid;
+  place-items: center;
+}
+.darkmodeCont{
+  height: 100%;
+  width: 40px;
+  place-self: center right;
+
+  display: grid;
+  place-items: center;
+}
+.DkMdImg {
+  height: 20px;
+  width: 20px;
+}
+.darkmodeBttn {
+  height: 40px;
+  width: 100%;
+  background: none;
+  border: 2px solid rgb(100, 250, 250);
+
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.darkmodeBttn:hover {
+  cursor: pointer;
+}
+
+
+
+.watchContainer {
+  height: 550px;
+}
+.watchContainerB {
+  display: grid;
+  height: 100px;
+  margin-top: 25px;
+  place-content: center;
+  grid-template-columns: 90px 20px 90px 20px 90px;
+  grid-template-rows: auto;
+  text-align: center;
+  font-size: 75px;
+}
+.watchTimezone {
+  text-align: center;
+}
+.watchContainerC {
+  margin-top: 50px;
+  height: 300px;
+  padding: 0 15px 0 25px;
+  
+  display: grid;
+  grid-template-columns: minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px) minmax(auto, 200px);
+  place-content: center;
+  gap: 25px;
+}
+.watchContainerC2 {
+  height: 300px;
+  width: 100%;
+  border: 1px solid yellowgreen;
+  text-align: center;
+}
+.loct {
+  height: 50px;
+  display: grid;
+  place-content: center;
+}
+.time {
+  height: 200px;
+  font-size: 30px;
+}
+
+
+
+.footer {
+  height: 120px;
+
+  border-top: 5px solid black;
+  text-align: center;
+}
+.footerLogosContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.logoFooter {
+  grid-column: 1;
+  float: left;
+  position: relative;
+  left: 25px;
+  width: 50px;
+}
+.logoFooter:hover{
+  cursor: pointer;
+}
+#LogoFooter {
+  float: left;
+}
+.footerSocials  {
+  float: right;
+  height: 75px;
+  margin-right: 50px;
+
+  display: grid;
+  place-items: center right;
+}
+.socialsLogos {
+  height: 25px;
+  width: 25px;
+}
+.socialsLogos:hover {
+  cursor: pointer;
+}
+.FaviconLogos {
+  width: 200px;
+  margin-left: 25px;
+}
+.FaviconLogos>a {
+  color: rgb(175, 175, 250);
+}
+
+
+
+/* MEDIAS MEDIAS MEDIAS */
+/*TABLET (615px - 768px)*/
+@media (max-width: 768px) and (min-width: 615px) {
+}
+/* 615px ++ */
+@media (min-width: 615px) {
+  .webMobCont {
+    display: none;
+  }
+}
+/* MOBILE - 614px */
+@media (max-width: 614px) {
+  .nav {
+    background-color: rgb(10, 50, 150);
+    border: none;
+    border-bottom: 5px solid black;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .webMobCont {
+    display: block;
+  }
+  .webMobileLogo {
+    height: 75px;
+  }
+  .darkmodeCont {
+    display: none;
+  }
+  .navButt {
+    position: fixed;
+    visibility: hidden;
+  }
+  .navText {
+    display: none;
+  }
+  .navRetBttn {
+    display: none;
+  }
+  .footer {
+    height: 120px;
+  }
+}
