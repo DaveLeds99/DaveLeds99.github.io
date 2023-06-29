@@ -521,6 +521,20 @@ body {
   margin: 0 5px;
 }
 
+
+.mobileSPLink {
+  margin: 20px auto;
+  border: 1px solid rgb(100, 250, 250);
+  width: 250px;
+  text-align: center; 
+}
+.mobileSPLink > a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
 .footer {
   height: 175px;
 
@@ -651,6 +665,9 @@ body {
   .webMobileLogo {
     display: none;
   }
+  .mobileSPLink {
+    display: none;
+  }
 }
 /* MOBILE - 614px */
 @media (max-width: 614px) {
@@ -720,6 +737,9 @@ body {
   .webMobileLogo {
     height: 50%;
     object-fit:none;
+  }
+  .mobileSPLink {
+    display: block;
   }
   .footer {
     height: 120px;
