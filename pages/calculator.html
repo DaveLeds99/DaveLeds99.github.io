@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Calculadora</title>
+        <link rel="icon" type="image/png" href="/imgs/DD_FavIcon.png">
+        <link rel="stylesheet" href="/styles/styGLOBAL.css">
+        <link rel="stylesheet" href="/styles/styCalculator.css">
+        <!-- Math Source -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo"/></a>
+                <div id="navLinks">
+                    <a href="/index.html" class="navLink">Inicio</a>
+                    <a href="/pages/sP.html" class="navLink">Otros Proyectos</a>
+                    <div id="navSeparator"></div>
+                    <a href="/index.html#contactAnchor" class="navLink">Contáctame</a>
+                    <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                        <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                    </button>
+                </div>
+                <div id="mobNav" onclick="mobMenu('open')">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </div>
+            </nav>
+        </header>
+        <div id="mobNavCont">
+            <div id="mobNavDisplay">
+                <a onclick="mobMenu('close')">Cerrar</a>
+                <hr>
+                <a href="/index.html">Inicio</a>
+                <a href="/pages/sP.html">Otros Proyectos</a>
+                <hr>
+                <a href="/index.html#contactAnchor">Contáctame</a>
+                <hr>
+                <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                    <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                </button>
+                <span id="mobDkDisclaimer">Dark / Light mode</span>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Calcs -->
+        <div class="cont0">
+            <div class="cont1A">
+                <textarea class="textA"></textarea>
+                <button id="clear" onclick="clearing()">C</button>
+                <button id="n7" onclick="calcu(7)">7</button>
+                <button id="n8" onclick="calcu(8)">8</button>
+                <button id="n9" onclick="calcu(9)">9</button>
+                <button id="div" onclick="calcu('÷')">÷</button>
+                <button id="n4" onclick="calcu(4)">4</button>
+                <button id="n5" onclick="calcu(5)">5</button>
+                <button id="n6" onclick="calcu(6)">6</button>
+                <button id="mult" onclick="calcu('*')">x</button>
+                <button id="n1" onclick="calcu(1)">1</button>
+                <button id="n2" onclick="calcu(2)">2</button>
+                <button id="n3" onclick="calcu(3)">3</button>
+                <button id="rest" onclick="calcu('-')">-</button>
+                <button id="n0" onclick="calcu(0)">0</button>
+                <button id="dec">.</button>
+                <button id="add" onclick="calcu('+')">+</button>
+                <button id="equal" onclick="calcu('=')">=</button>
+            </div>
+            <div class="cont1B">
+
+            </div>
+        </div>
+
+
+
+
+
+        <footer>
+            <div id="footerContent">
+                <div id="logosCont">
+                    <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo" id="logoFooter"/></a>
+                    <div id="socialsCont">
+                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="/imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
+                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="/imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
+                    </div>
+                </div>
+                <div class="footerText">Íconos por <a class="varLink darkLink" href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
+            </div>
+        </footer>
+
+
+        <script src="/scripts/scrGlobal_DK,MB.js"></script>
+        <script src="/scripts/scrCalculator.js"></script>
+    </body>
+</html>
