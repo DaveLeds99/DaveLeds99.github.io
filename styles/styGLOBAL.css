@@ -1,0 +1,230 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: white;
+  font-family: 'Michroma', monospace;
+  font-size: 15px;
+  background-color: rgb(25, 25, 25);
+}
+* {
+  box-sizing: border-box;
+}
+:root {
+  --globalMaxWidth: 1500px;
+  --globalSidesPadding: 50px;
+  --blueContrast: rgb(75, 185, 250);
+  /* blueContrast(old): rgb(100, 250, 250)*/
+}
+
+
+
+
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  height: 73px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(10px);
+}
+nav {
+  height: 100%;
+  width: 100%;
+  max-width: var(--globalMaxWidth);
+  margin: 0 auto;
+  padding: 5px var(--globalSidesPadding);
+  display: flex;
+  column-gap: 25px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  display: grid;
+  place-content: center;
+}
+#navLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 25px;
+}
+.navLink {
+  color: var(--blueContrast);
+  text-decoration: solid underline var(--blueContrast) 2px;
+}
+.navLink:hover{
+  color: white;
+  text-decoration-color: white;
+}
+#navSeparator {
+  height: 32px;
+  width: 3px;
+  background-color: var(--blueContrast);
+}
+.DkMdImg {
+  height: 20px;
+  width: 20px;
+}
+.darkmodeBttn {
+  height: 40px;
+  width: 40px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid var(--blueContrast);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+.darkmodeBttn:hover {
+  cursor: pointer;
+}
+.darkBtnnLIGHT:hover {
+  background-color: white !important;
+}
+.darkBtnnDARK:hover {
+  background-color: black !important;
+}
+#mobNav {
+  height: 90%;
+  width: 25px;
+  padding: 5px;
+  border: 1px solid var(--blueContrast);
+  display: none;
+  place-items: center;
+}
+#mobNav>span {
+  height: 10px;
+  display: grid;
+  place-content: center;
+}
+#mobNavCont {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: none;
+}
+#mobNavDisplay {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 220px;
+  max-width: max-content;
+  padding: 10px 15px;
+  background-color: black;
+}
+#mobNavDisplay a {
+  margin: 15px auto;
+  color: var(--blueContrast);
+  display: block;
+}
+#mobNavDisplay hr {
+  width: 100%;
+  margin: 15px auto;
+}
+#mobDkDisclaimer {
+  font-size: 12px;
+}
+
+
+
+
+
+/* SPECIALS */
+.DvDvLogo {
+  height: 50px;
+  aspect-ratio: 2/1;
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+.darkLink {
+  color: rgb(175, 175, 250);
+}
+.darkLink:hover {
+  color: rgb(150, 200, 250);
+}
+.lightLink {
+  color: -webkit-link;
+}
+.lightLink:hover {
+  color: rgb(50, 50, 150);
+}
+
+
+
+
+
+footer {
+  height: max-content;
+  min-height: 125px;
+  width: 100vw;
+  padding-bottom: 15px;
+  border-top: 5px solid black;
+}
+#footerContent {
+  max-width: var(--globalMaxWidth);
+  margin: 0 auto;
+  padding: 0 var(--globalSidesPadding);
+}
+#logosCont {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#socialsCont  {
+  height: 100%;
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: inherit;
+  column-gap: 20px;
+}
+.socialsLogos {
+  height: 25px;
+  width: 25px;
+}
+.footerText {
+  width: 100%;
+  font-size: 12px;
+}
+
+
+
+
+
+/* MEDIAS MEDIAS MEDIAS */
+/* TABLETS (800px --) */
+@media (max-width: 800px) {
+  :root {
+    --globalSidesPadding: 20px;
+  }
+  nav {
+    font-size: 15px;
+  }
+  #navLinks {
+    display: none;
+  }
+  #mobNav {
+    display: grid;
+  }
+}
