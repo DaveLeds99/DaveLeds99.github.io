@@ -1,88 +1,109 @@
 <!doctype html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Otros Proyectos</title>
-        <link rel="icon" type="image/png" href="/imgs/favIcon.png">
-        <link rel="stylesheet" href="/styles/stySpecialPs.css">
+        <link rel="icon" type="image/png" href="/imgs/DD_FavIcon.png">
+        <link rel="stylesheet" href="/styles/styGLOBAL.css">
+        <link rel="stylesheet" href="/styles/stySP.css">
     </head>
-    <body>
-        <!-- Nav -->
-        <nav class="nav">
-            <div class="navRetBttn"><div class="navRetBttnB"><a href="/index.html"><button class="navButt"> Regresar a la Página Principal </button></a></div></div>
-            <div class="navText">Otros Proyectos</div>
-            <div class="webMobCont"><img class="webMobileLogo" src="/imgs/logoWhite.png" alt="Logo"/></div>
-            <div class="darkmodeCont">
-                <button class="darkmodeBttn" onclick="darkMode()" onmouseenter="DkHover()" onmouseleave="DkNoHov()">
-                    <img class="DkMdImg" src="../../imgs/DarkLight.png" alt="light mode"/>
+   <body>
+        <header>
+            <nav>
+                <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo"/></a>
+                <div id="navLinks">
+                    <a href="/index.html" class="navLink">Inicio</a>
+                    <div id="navSeparator"></div>
+                    <a href="/index.html#contactAnchor" class="navLink">Contáctame</a>
+                    <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                        <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                    </button>
+                </div>
+                <div id="mobNav" onclick="mobMenu('open')">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </div>
+            </nav>
+        </header>
+        <div id="mobNavCont">
+            <div id="mobNavDisplay">
+                <a onclick="mobMenu('close')">Cerrar</a>
+                <hr>
+                <a href="/index.html">Inicio</a>
+                <hr>
+                <a href="/index.html#contactAnchor">Contáctame</a>
+                <hr>
+                <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                    <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
                 </button>
+                <span id="mobDkDisclaimer">Dark / Light mode</span>
             </div>
-        </nav>
-
-        <!-- MainPage Bttn-->
-        <div class="retBttn">
-            <a href="/index.html" target="_self">Return to Main Page</a>
         </div>
 
 
-        <hr class="hrLine upLine">
 
 
-        <!-- Menu -->
+
         <section class="menuCont">
-            <div class="menuItem calc">
-                <a href="/pages/calculadora.html" target="_self">
-                    <div class="itemTxt">Calculadora</div>
-                </a>
-            </div>
-            <div class="menuItem selCols">
-                <a href="/pages/selCols.html" target="_self">
-                    <div class="itemTxt">Selector de Colores</div>
-                </a>
-            </div>
-            <div class="menuItem relDig">
-                <a href="/pages/relDig.html" target="_self">
-                    <div class="itemTxt">Reloj Digital</div>
-                </a>
-            </div>
-            <div class="menuItem contPals">
-                <a href="/pages/contPals.html" target="_self">
-                    <div class="itemTxt">Contador de Palabras</div>
-                </a>
-            </div>
+            <a class="menuItem" href="/pages/calculator.html" target="_self">
+                Calculadora
+                <img class="menuImg" src="/imgs/SpMath.png" alt="icon_Calculator">
+            </a>
+            <a class="menuItem" href="/pages/selCols.html" target="_self">
+                Selector de colores
+                <img class="menuImg" src="/imgs/SpSelCols.png" alt="icon_SelCols">
+            </a>
+            <a class="menuItem" href="/pages/digWatch.html" target="_self">
+                Reloj digital
+                <img class="menuImg" src="/imgs/SpReloj.png" alt="icon_RelDig">
+            </a>
+            <a class="menuItem" href="/pages/wordCount.html" target="_self">
+                Contador de palabras
+                <img class="menuImg" src="/imgs/SpContPals.png" alt="icon_WordCount">
+            </a>
+            <a class="menuItem" href="/pages/randQuotes.html" target="_self">
+                Frases aleatorias
+                <img class="menuImg" src="/imgs/SpQuotes.png" alt="icon_RandQuotes">
+            </a>
+            <a class="menuItem" href="/pages/visitSurvey.html" target="_self">
+                Encuesta de visita
+                <img class="menuImg" src="/imgs/SpSurvey.png" alt="icon_Survey">
+            </a>
+            <a class="menuItem" href="/pages/moviePhrases.html" target="_self">
+                Frases de películas
+                <img class="menuImg" src="/imgs/SpMovieP.png" alt="icon_MoviePhrases">
+            </a>
+            <a class="menuItem" href="/pages/randNumber.html" target="_self">
+                Número aleatorio
+                <img class="menuImg" src="/imgs/SpRandNum.png" alt="icon_RandNum">
+            </a>
+            <a class="menuItem" href="/pages/rockPaperScissors.html" target="_self">
+                Piedra, papel, tijeras
+                <img class="menuImg" src="/imgs/SpRoPaS.png" alt="icon_RoPaS">
+            </a>
         </section>
-
-
-        <hr class="hrLine">
-
-
-        <!-- MainPage Bttn-->
-        <div class="retBttn">
-            <a href="/index.html" target="_self">Return to Main Page</a>
-        </div>
         
         
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footerLogosContainer">
-                <a href="../../index.html" target="_self" class="logoFooter"><img src="../../imgs/logoWhite.png" alt="logo" id="LogoFooter"/></a>
-                <div class="footerSocials">
-                    <div>
-                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="../../imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
-                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="../../imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
+
+
+
+        <footer>
+            <div id="footerContent">
+                <div id="logosCont">
+                    <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo" id="logoFooter"/></a>
+                    <div id="socialsCont">
+                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="/imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
+                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="/imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
                     </div>
                 </div>
+                <div class="footerText">Íconos por <a class="varLink darkLink" href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
             </div>
-            <div class="FaviconLogos">Íconos por <a href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
-  
         </footer>
 
 
-        <!-- Load external JavaScript -->
-        <script src="/scripts/scrSpecialPs.js"></script>
+        <script src="/scripts/scrGlobal_DK,MB.js"></script>
+        <script src="/scripts/scrSP.js"></script>
     </body>
 </html>
-
-
