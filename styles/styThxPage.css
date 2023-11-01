@@ -1,0 +1,39 @@
+.thx {
+  min-height: 150px;
+  width: 60%;
+  max-width: 750px;
+  min-width: 250px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 5px dashed rgb(75, 75, 75);
+  font-size: 25px;
+  text-align: center;
+}
+.disclaimer {
+  margin: 25px;
+  text-align: center;
+  font-size: 12px;
+}
+#thxLink {
+  /* Position */
+  /* Size, Margin & Padding */
+  width: 300px;
+  margin: 25px auto 75px auto;
+  padding: 10px;
+  /* Text */
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  /* Decors */
+  background: none;
+  border: 2px solid var(--blueContrast);
+  border-radius: 5px;
+  /* Others */
+  display: grid;
+  place-items: center;
+}
+#thxLink:hover {
+  background-color: var(--blueContrast);
+  color: black;
+  cursor: pointer;
+}
