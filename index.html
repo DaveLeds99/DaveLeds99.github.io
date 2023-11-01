@@ -7,47 +7,60 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-        
           gtag('config', 'G-TL13MD86C2');
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
         <title>DaveDev</title>
-        <link rel="icon" type="image/png" href="/imgs/favIcon.png">
-
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="icon" type="image/png" href="/imgs/DD_FavIcon.png">
+        <link rel="stylesheet" href="/styGLOBAL.css">
+        <link rel="stylesheet" href="/styles/styHome.css">
     </head>
     <body>
-        <!-- Nav -->
-        <nav class="nav">
-            <div class="navText"><div> Dave Dev </div></div>
-            <div><img class="webMobileLogo" src="/imgs/logoWhite.png" alt="Logo"/></div>
-            <div class="navContactContainter"><div class="navContactContainterB"><a href="#contact"><button class="navButt"> Contáctame </button></a></div></div>
-            <div class="darkmodeCont">
-                <button class="darkmodeBttn" onclick="darkMode()" onmouseenter="DkHover()" onmouseleave="DkNoHov()">
+        <header>
+            <nav>
+                <img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo"/>
+                <div id="navLinks">
+                    <a href="#contactAnchor" class="navLink">Contáctame</a>
+                    <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                        <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                    </button>
+                </div>
+                <div id="mobNav" onclick="mobMenu('open')">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </div>
+            </nav>
+        </header>
+        <div id="mobNavCont">
+            <div id="mobNavDisplay">
+                <a onclick="mobMenu('close')">Cerrar</a>
+                <hr>
+                <a href="#aboutMeAnchor" onclick="mobMenu('close')">Sobre mí</a>
+                <a href="#projectsAnchor" onclick="mobMenu('close')">Proyectos</a>
+                <a href="#contactAnchor" onclick="mobMenu('close')">Contáctame</a>
+                <hr>
+                <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
                     <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
                 </button>
-            </div>
-        </nav>
-
-
-        <!-- Portada -->
-        <div class="coverContainer">
-            <div class="coverText">
-                <div class="coverTextContainer">
-                    <h1 class="coverTitle">Hola, bienvenido!</h1>
-                    <div class="coverSubtitle"> Soy David, Desarrollador Web </div>
-                </div>
+                <span id="mobDkDisclaimer">Dark / Light mode</span>
             </div>
         </div>
 
 
+
+        <section id="coverContainer">
+            <div id="coverTextContainer">
+                <h1>Hola, bienvenido</h1>
+                <span id="coverSubtitle">Soy David, Desarrollador Web</span>
+            </div>
+        </section>
+
+
+
         <div class="hexSeparator">
-            <div class="row line2">
-                <div class="hexagon"></div>
-                <div class="hexagon"></div>
+            <div class="row">
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
@@ -59,39 +72,52 @@
         </div>
         
 
-        <!-- Menu lateral -->
+
         <div class="latMenu">
-            <a href="#sobreMi" class="latMenuBttn">Sobre mi</a>
-            <a href="#projects" class="latMenuBttn">Proyectos</a>
-            <a href="#contact" class="latMenuBttn">Contacto</a>
+            <a href="#aboutMeAnchor" class="latMenuBttn">Sobre mi</a>
+            <a href="#projectsAnchor" class="latMenuBttn">Proyectos</a>
+            <a href="#contactAnchor" class="latMenuBttn">Contacto</a>
         </div> 
 
 
-        <!-- About me -->
-        <a name="sobreMi" class="anchor"></a>
-        <div class="aboutMe"><h3 class="sectionTitle">Un poco sobre mí</h3>
-            <div class="aboutMeMenu"> <!--MUSIC, HTML, GAMES, APP, PILOT -->
-                <button class="abMeBttn" id="webDev" onclick="bttnWebDev()">Desarrollador Web</button>
-                <button class="abMeBttn" id="musc" onclick="bttnMusic()">Música</button>
+
+        <a name="aboutMeAnchor" class="anchor"></a>
+        <section id="aboutMe">
+            <h3 class="sectionTitle">un poco sobre mí</h3>
+            <div id="aboutMeMenu"> <!--MUSIC, HTML, GAMES, APP, PILOT -->
+                <button class="homeButton abtBttnActive" id="abtDevBttn" onclick="abtMeDisp('devInfo')">Desarrollador Web</button>
+                <button class="homeButton" id="abtMusicBttn" onclick="abtMeDisp('musicInfo')">Música</button>
             </div> 
-            <div class="aboutMeContainer">
+            <select id="abtSelMenu" onchange="abtMeDisp(this.value)">
+                <option value="devInfo" selected>Desarrollador Web</option>
+                <option value="musicInfo">Música</option>
+            </select>
+            <div class="aboutMeContainer" id="abtDevInfo">
                 <div class="aboutMeText">
-                    Soy David, desarrollado Web autodidacta, actualmente residiendo en México.<p/>
-                    En Agosto de 2020 creé mi primer sitio web, inicié con los basicos de HTML, CSS y poco después JavaScript, 
-                    a través de cursos y videos en línea.<p/>
-                    He tenido múltiples proyectos desde entonces, desde sitios de contacto hasta tiendas en línea. <p/>
-                    Me caracterizo por mi capacidad para solucionar problemas, 
-                    además de priorizar y gestionar proyectos. <p class="paragraphJump"/>
-                    paragrapghJump <p/>
-                    Puedes ver algunos de los proyectos en los que he trabajado más abajo, y si deseas contactarme siéntete libre de hacerlo.
+                    <p>Soy David, desarrollado Web autodidacta, actualmente residiendo en México.</p>
+                    <p>En Agosto de 2020 creé mi primer sitio web, inicié con los basicos de HTML, CSS y poco después JavaScript, 
+                    a través de cursos y videos en línea. He tenido múltiples proyectos desde entonces, desde sitios de contacto hasta tiendas en línea.</p>
+                    <p>Me caracterizo por mi capacidad para solucionar problemas, además de priorizar y gestionar proyectos.</p>
+                    <p class="invisTxt">...</p>
+                    <p>Puedes ver algunos de los proyectos en los que he trabajado más abajo, y si deseas contactarme siéntete libre de hacerlo.</p>
                 </div>
                 <figure class="aboutMeImgContainer">
-                    <img src="https://live.staticflickr.com/65535/52741815071_44b66fc461_o.jpg" class="aboutMeImg"/>
-                    <figcaption class="abtImgFooter">(Foto de <a href="https://unsplash.com/@flowixxcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ján Vlačuha</a> en <a href="https://unsplash.com/es/s/fotos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</figcaption>
-                    <!--<div class="abtImgFooter">(Foto de <a href="https://unsplash.com/@flowixxcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ján Vlačuha</a> en <a href="https://unsplash.com/es/s/fotos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</div>-->
+                    <img src="https://live.staticflickr.com/65535/52741815071_44b66fc461_o.jpg" class="aboutMeImg" loading="lazy" />
+                    <figcaption class="abtImgFooter">(Foto de <a href="https://unsplash.com/@flowixxcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="varLink darkLink">Ján Vlačuha</a> en <a class="varLink darkLink" href="https://unsplash.com/es/s/fotos/computer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>)</figcaption>
                 </figure>
-            </div>  
-        </div>
+            </div> 
+            <div class="aboutMeContainer" id="abtMusicInfo">
+                <div class="aboutMeText">
+                    <p>Desde que tengo memoria la música siempre ha sido parte de mi vida, y con el paso del tiempo se convirtio en parte primordial de mi vida. </p>
+                    <p>En distintos momentos fué un hobby, en otros se convirtió en una actividad de tiempo completo, participando en múltiples eventos, y hasta dar clases. Siempre ha sido un pilar de mi vida, ya sea para relajarme o como tiempo completo. </p>
+                    <p>Se tocar la batería, el piano y la trompeta, así como una variedad de percusiones incluyendo el Xilófono, siendo el piano mi intrumento favorito.</p>
+                </div>
+                <figure class="aboutMeImgContainer">
+                    <img src="https://live.staticflickr.com/65535/52847829452_2f4effa895_o.jpg" class="aboutMeImg" loading="lazy" />
+                </figure>
+            </div> 
+        </section>
+
 
 
         <div class="hexSeparator">
@@ -103,46 +129,38 @@
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
-                <div class="hexagon"></div>
-                <div class="hexagon"></div>
             </div>
         </div>
         
 
-        <!-- Projects -->
-        <a name="projects" class="anchor"></a>
-        <div class="projects">
-            <h3 class="sectionTitle">Mis proyectos</h3>
-            <div class="projectsBox">
-                <div class="leftColumn">
-                    <div class="projectsListB projectsAltcActive " onclick="buttonAltc()" >
-                        <img src="https://live.staticflickr.com/65535/52358320346_de292dff4e_o.jpg" class="projectsLogos B1_Altc" alt="LogoAldetec" />
-                        <div class="projectsTitle">Aldetec</div>
-                    </div>
-                    <div class="projectsListB projectsMumxActive" onclick="buttonMuMx()" >
-                        <img src="https://live.staticflickr.com/65535/52475271423_c569b4d8e7_o.png" class="projectsLogos B2_Museos" alt="Logo2" />
-                        <div class="projectsTitle">Museos CDMX</div>
-                    </div>
-                    <div class="SPcont">
-                        <a href="/pages/sP.html">
-                            <button class="SPButton">Otros Proyectos</button>
-                        </a>
-                    </div>
+
+        <a name="projectsAnchor" class="anchor"></a>
+        <section id="projects">
+            <h3 class="sectionTitle">mis proyectos</h3>
+            <div id="projectsCont">
+                <div class="projectBox">
+                    <img src="https://live.staticflickr.com/65535/52502648441_27ef5e811b_o.png" class="projectsPreviewImg" loading="lazy" alt="projectPreview_Aldetec" />
+                    <a href="https://aldetec.mx/" target="_blank"><button class="homeButton">Visitar sitio</button></a>
+                    <p class="projectAbout">Mantenimiento, Venta e Instalación de Equipo de CCTV, Alarmas y mucho más.</p>
+                    <p class="projectDate">Julio, 2021</p>
                 </div>
-                <div class="rightColumn">
-                    <div class="projectsImgContainer">
-                        <a href="https://aldetec.mx/" target="_blank" id="projectsLink" class="projectsPreviewButton">
-                            <div class="projectsImgContainerB"><img src="https://live.staticflickr.com/65535/52502648441_27ef5e811b_o.png" class="projectsPreviewImg" alt="projectPreview" /></div>
-                            <div class="projectsButtonText"> Click para visitar el sitio </div>
-                        </a>
-                    </div>
-                    <div class="projectsAbout"> Mantenimiento, Venta e Instalación de Equipo de CCTV, Alarmas y mucho más. </div>
-                    <div class="projectsDate"> Julio, 2021 </div>
+                <div class="projectBox">
+                    <img src="/imgs/pastelAbejaDemo.png" class="projectsPreviewImg" loading="lazy" alt="projectPreview_PastelAbeja" />
+                    <a href="https://daveleds99.github.io/PastelAbeja/" target="_blank"><button class="homeButton">Visitar sitio</button></a>
+                    <p class="projectAbout">Venta de pasteles, tartas y postres.</p>
+                    <p class="projectDate">Noviembre, 2022</p>
+                </div>
+                <div class="projectBox">
+                    <img src="/imgs/DD_LogoDark.png" class="projectsSPImg" loading="lazy" alt="projectPreview_SP" />
+                    <a href="/pages/sP.html" target="_self"><button class="homeButton">Otros Proyectos</button></a>
                 </div>
             </div>
-        </div>
+        </section>
 
         
+
+
+
         <div class="hexSeparator">
             <div class="row line2">
                 <div class="hexagon"></div>
@@ -152,82 +170,67 @@
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
-                <div class="hexagon"></div>
-                <div class="hexagon"></div>
             </div>
         </div>
 
 
-        <!-- Contact -->
-        <a name="contact" class="anchor"></a>
-        <h3 class="sectionTitle contacto"> contacto </h3>
-        <div class="background">
-            <div class="container">
-                <div class="screen">
-                    <div class="screen-header"></div>
-                    <div class="screen-body">
-                        <div class="screen-body-item left">
-                            <div class="app-title">
-                                <span>CONTÁCTAME</span>
-                            </div>
-                            <div class="app-contact">
-                                INFO CONTACTO: <p/> davdev1@outlook.com
-                            </div>
-                        </div>
-                        <div class="screen-body-item">
-                            <form action="https://formsubmit.co/davdev1@outlook.com" method="POST">
-                                <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="Nombre *" type="Nombre" name="Nombre" required>
-                                </div>
-                                <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="EMAIL *" type="eMail" name="eMail" required>
-                                </div>
-                                <div class="app-form-group">
-                                    <input class="app-form-control" placeholder="Teléfono" type="tel" name="tel">
-                                </div>
-                                <div class="app-form-group message">
-                                    <textarea class="app-form-control" placeholder="Mensaje *" rows="5" name="Mensaje" required></textarea>
-                                </div>
-                                <div class="app-form-group buttons">
-                                    <button class="app-form-button" type="submit">ENVIAR</button>
-                                </div>
-                                <input type="hidden" name="_subject" value="Formulario nuevo llenado desde Dave Dev WS!">
-                                <input type="hidden" name="_template" value="basic">
-                                <input type="hidden" name="_next" value="https://davedevs.w3spaces.com/pages/thxPage.html">
-                                <input type="hidden" name="_captcha" value="false">
-                            </form>
-                        </div>
-                    </div>
+
+
+
+        <a name="contactAnchor" class="anchor"></a>
+        <section id="contacto">
+            <h3 class="sectionTitle">contacto</h3>
+            <div id="contactoCont">
+                <div id="contactInfo">
+                    <p id="contactInfoTitle">Contáctame</p>
+                    <p id="contactInfoTxt">Info Contacto: <a class="varLink darkLink" href="mailto: davdev1@outlook.com?subject=Contacto&amp;body=Hola, ¡me interesa una página web!">davdev1@outlook.com</a></p>
                 </div>
+                <form id="contactForm" action="https://formsubmit.co/davdev1@outlook.com" method="POST">
+                    <fieldset>
+                        <label>Nombre *</label>
+                        <input class="contactInput" placeholder="Nombre" type="Name" name="Nombre" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Email *</label>
+                        <input class="contactInput" placeholder="ejemplo@mail.com" type="email" name="Email" required>
+                    </fieldset>
+                    <fieldset>
+                        <label>Teléfono</label>
+                        <input class="contactInput" placeholder="(opcional)" type="text" name="PhoneNmber">
+                    </fieldset>
+                    <fieldset>
+                        <label>Mensaje * </label>
+                        <textarea class="contactInput" placeholder="Me interesa una página web!" type="text" rows="7" name="Message" required></textarea>
+                    </fieldset>
+                    <button id="contactBttn" class="homeButton" type="submit">Enviar</button>
+                    <input type="hidden" name="_subject" value="Formulario nuevo llenado desde Dave Dev WS!">
+                    <input type="hidden" name="_template" value="basic">
+                    <input type="hidden" name="_next" value="https://daveleds99.github.io/pages/thxPage.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
             </div>
-        </div>
-
-   
-        <!-- WebDisclaimer -->
-        <div class="webDisclaimer"> Accede a la versión completa disponible en PC y Tablets </div>
+        </section>
+        
+        
 
 
-        <!-- Mobile SP Link -->
-        <div class="mobileSPLink"><a href="/pages/sP.html">Herramientas Especiales </a></div>
 
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footerLogosContainer">
-                <a href="index.html" target="_self" class="logoFooter"><img src="/imgs/logoWhite.png" alt="logo" id="LogoFooter"/></a>
-                <div class="footerSocials">
-                    <div>
+        <footer>
+            <div id="footerContent">
+                <div id="logosCont">
+                    <img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo" id="logoFooter"/>
+                    <div id="socialsCont">
                         <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="/imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
                         <a href="https://www.instagram.com/dava909/" target="_blank"><img src="/imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
                     </div>
                 </div>
+                <div class="footerText">Íconos por <a class="varLink darkLink" href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
             </div>
-            <div class="FaviconLogos">Íconos por <a href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
         </footer>
 
 
-        <!-- Load external JavaScript -->
-        <script src="../scripts.js"></script>
+        <script src="/scripts/scrGlobal_DK,MB.js"></script>
+        <script src="/scripts/scrHome.js"></script>
     </body>
 </html>
 
