@@ -1,0 +1,46 @@
+:root {
+  --shadowSP: 5px 5px 9px 1px rgb(100, 100, 100);
+  --shadowSPHvr: 5px 5px 10px 10px rgb(100, 100, 100);
+}
+
+
+.menuCont {
+  height: auto;
+  width: 90%;
+  max-width: var(--globalMaxWidth);
+  margin: 50px auto;
+  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 45px;
+  place-content: center;
+}
+.menuItem {
+  /* Position */
+  /* Size, Margin & Padding */
+  height: 130px;
+  flex: 1 0 250px;
+  padding: 10px 5px;
+  /* Text */
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  /* Decors */
+  border: 1px solid  var(--blueContrast);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: var(--shadowSP);
+  /* Others */
+  display: grid;
+  place-items: center;
+}
+.menuItem:hover {
+  border: 5px solid  var(--blueContrast);
+  box-shadow: var(--shadowSPHvr);
+  cursor: pointer;
+}
+.menuImg {
+  height: 75px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
