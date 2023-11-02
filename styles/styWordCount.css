@@ -1,0 +1,47 @@
+#cont {
+  width: 90%;
+  max-width: var(--globalMaxWidth);
+  margin: 50px auto;
+  padding: 0;
+  border-radius: 5px;
+}
+#textCont {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  border: 1px solid rgba(200, 200, 200, .5);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  resize: none;
+}
+#wordCounting {
+  height: auto;
+  min-height: 75px;
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px 50px;
+}
+.wordBttn {
+  height: 30px;
+  width: 210px;
+  color: inherit;
+  border: 2px solid red;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.wordBttn:hover {
+  color: red;
+  background-color: black;
+  cursor: pointer;
+}
