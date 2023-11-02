@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Encuesta Visita</title>
+        <link rel="icon" type="image/png" href="/imgs/DD_FavIcon.png">
+        <link rel="stylesheet" href="/styles/styGLOBAL.css">
+        <link rel="stylesheet" href="/styles/styVisitSurv.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo"/></a>
+                <div id="navLinks">
+                    <a href="/index.html" class="navLink">Inicio</a>
+                    <a href="/pages/sP.html" class="navLink">Otros Proyectos</a>
+                    <div id="navSeparator"></div>
+                    <a href="/index.html#contactAnchor" class="navLink">Contáctame</a>
+                    <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                        <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                    </button>
+                </div>
+                <div id="mobNav" onclick="mobMenu('open')">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </div>
+            </nav>
+        </header>
+        <div id="mobNavCont">
+            <div id="mobNavDisplay">
+                <a onclick="mobMenu('close')">Cerrar</a>
+                <hr>
+                <a href="/index.html">Inicio</a>
+                <a href="/pages/sP.html">Otros Proyectos</a>
+                <hr>
+                <a href="/index.html#contactAnchor">Contáctame</a>
+                <hr>
+                <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                    <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                </button>
+                <span id="mobDkDisclaimer">Dark / Light mode</span>
+            </div>
+        </div>
+
+
+
+
+
+        <p id="description">Queremos saber tu opinión</p>
+        <form id="survey-form">
+            <p class="elementGroup">
+                <label id="name-label" for="name">Nombre *</label>
+                <input id="name" type="text" placeholder="Nombre (Apellido opcional)" required/>
+            </p>
+            <p class="elementGroup">
+                <label id="email-label" for="email">Email *</label>
+                <input id="email" type="email" placeholder="Dirección de e-mail" required/>
+            </p>
+            <p class="elementGroup">
+                <label>Califícanos *</label>
+                <input id="number" type="number" min="1" max="10" placeholder="Selecciona un número del 1 al 10" required/>
+            </p>
+            <p class="elementGroup">
+                <label>¿Cómo supiste de nosotros? *</label>
+                <select id="dropdown" required>
+                    <option value="">(Elige una opción)</option>
+                    <option value="1">Instagram</option>
+                    <option value="2">Facebook</option>
+                    <option value="3">TikTok</option>
+                    <option value="4">Twitter</option>
+                    <option value="5">YouTube</option>
+                    <option value="6">Sitio Web</option>
+                    <option value="7">Otro (escríbelo en los comentarios)</option>
+                </select>
+            </p>
+            <p class="elementGroup">
+                <div>¿Te gustaría recibir correos y noticias una vez al mes de nuestros prodcutos? *</div>
+                <label>
+                    <input type="radio" name="news" required/>Si
+                </label>
+                <label>
+                    <input type="radio" name="news"/> No
+                </label>
+            </p>
+            <p class="elementGroup">
+                <div>¿Tienes algún animal favorito? (Opcional, puedes elegir uno o más)</div>
+                <label>
+                    <input type="checkbox" value="dog"/>Perro
+                </label>
+                <label>
+                    <input type="checkbox" value="cat"/>Gato
+                </label>
+                <label>
+                    <input type="checkbox" value="bird"/>Pájaro
+                </label>
+                <label>
+                    <input type="checkbox" value="hamster"/>Hámster
+                </label>
+                <label>
+                    <input type="checkbox" value="tiger"/>Tigre
+                </label>
+                <label>
+                    <input type="checkbox" value="lion"/>León
+                </label>
+                <label>
+                    <input type="checkbox" value="other"/>Otro (escribelo en los comentarios)
+                </label>
+            </p>
+            <p class="elementGroup">
+                <label>Comentarios adicionales (opcional)</label>
+                <textarea rows="5" cols="20" placeholder="¡Amamos sus productos!"></textarea>
+            </p>
+            <div class="buttCont">
+                <button id="submit">
+                    Enviar
+                </button>
+            </div>
+        </form>
+
+
+
+
+
+        <footer>
+            <div id="footerContent">
+                <div id="logosCont">
+                    <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo" id="logoFooter"/></a>
+                    <div id="socialsCont">
+                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="/imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
+                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="/imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
+                    </div>
+                </div>
+                <div class="footerText">Íconos por <a class="varLink darkLink" href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
+            </div>
+        </footer>
+
+
+        <script src="/scripts/scrGlobal_DK,MB.js"></script>
+    </body>
+</html>
