@@ -1,42 +1,57 @@
 <!doctype html>
-
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
         <title>Selector de Colores</title>
-        <link rel="icon" type="image/png" href="/imgs/favIcon.png">
-
-
-        <!-- Load external CSS styles -->
+        <link rel="icon" type="image/png" href="/imgs/DD_FavIcon.png">
+        <link rel="stylesheet" href="/styles/styGLOBAL.css">
         <link rel="stylesheet" href="/styles/stySelCols.css">
+    </head>
+   <body>
+        <header>
+            <nav>
+                <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo"/></a>
+                <div id="navLinks">
+                    <a href="/index.html" class="navLink">Inicio</a>
+                    <a href="/pages/sP.html" class="navLink">Otros Proyectos</a>
+                    <div id="navSeparator"></div>
+                    <a href="/index.html#contactAnchor" class="navLink">Contáctame</a>
+                    <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                        <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                    </button>
+                </div>
+                <div id="mobNav" onclick="mobMenu('open')">
+                    <span>-</span>
+                    <span>-</span>
+                    <span>-</span>
+                </div>
+            </nav>
+        </header>
+        <div id="mobNavCont">
+            <div id="mobNavDisplay">
+                <a onclick="mobMenu('close')">Cerrar</a>
+                <hr>
+                <a href="/index.html">Inicio</a>
+                <a href="/pages/sP.html">Otros Proyectos</a>
+                <hr>
+                <a href="/index.html#contactAnchor">Contáctame</a>
+                <hr>
+                <button class="darkmodeBttn darkBtnnLIGHT" onclick="darkMode()">
+                    <img class="DkMdImg" src="/imgs/DarkLight.png" alt="light mode"/>
+                </button>
+                <span id="mobDkDisclaimer">Dark / Light mode</span>
+            </div>
+        </div>
+
+
+
 
         
-
-    </head>
-
-    <body>
-        <nav class="nav">
-            <div class="navRetBttn"><div class="navRetBttnB"><a href="/index.html"><button class="navButt"> Regresar a la Página Principal </button></a></div></div>
-            <div class="navRetBttn"><div class="navRetBttnB"><a href="/pages/sP.html"><button class="navButt"> Regresar a Otros Projectos </button></a></div></div>
-            <div class="navText">Selector De Colores</div>
-            <div class="webMobCont"><img class="webMobileLogo" src="/imgs/logoWhite.png" alt="Logo"/></div>
-            <div class="darkmodeCont">
-                <button class="darkmodeBttn" onclick="darkMode()" onmouseenter="DkHover()" onmouseleave="DkNoHov()">
-                    <img class="DkMdImg" src="../../imgs/DarkLight.png" alt="light mode"/>
-                </button>
-            </div>
-        </nav>
-
-
-
         <div class="subtitle">
             Elige un color, luego haz click en "Cambiar color".
         </div>
-
         <div id="baseplate"></div>
-
         <div class="colorSelContainerA">
             <div class="colorSelContainerB">
                 <div class="colorSelector RGB">
@@ -66,25 +81,24 @@
         </div>
 
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footerLogosContainer">
-                <a href="../../index.html" target="_self" class="logoFooter"><img src="../../imgs/logoWhite.png" alt="logo" id="LogoFooter"/></a>
-                <div class="footerSocials">
-                    <div>
-                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="../../imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
-                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="../../imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
+        
+        
+
+        <footer>
+            <div id="footerContent">
+                <div id="logosCont">
+                    <a href="/index.html" target="_self"><img src="/imgs/DD_LogoDark.png" alt="logo" class="DvDvLogo" id="logoFooter"/></a>
+                    <div id="socialsCont">
+                        <a href="https://www.linkedin.com/in/david-ledesma-22349015a" target="_blank"><img src="/imgs/linkedinWhite.png" alt="LinkedIn" class="socialsLogos" id="LinkedIn"/></a>
+                        <a href="https://www.instagram.com/dava909/" target="_blank"><img src="/imgs/instagramWhite.png" alt="Instragram" class="socialsLogos" id="Instagram"/></a>
                     </div>
                 </div>
+                <div class="footerText">Íconos por <a class="varLink darkLink" href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
             </div>
-            <div class="FaviconLogos">Íconos por <a href="https://www.flaticon.es" target="_blank" title="iconos">Flaticon</a></div>
         </footer>
 
 
-        <!-- Load external JavaScript -->
+        <script src="/scripts/scrGlobal_DK,MB.js"></script>
         <script src="/scripts/scrSelCols.js"></script>
     </body>
-
 </html>
-
-
