@@ -1,0 +1,76 @@
+:root {
+  --digWatch: rgba(0, 0, 0, 0.2);
+}
+
+
+#watchContainer {
+  /* Position */
+  /* Size, Margin & Padding */
+  height: auto;
+  min-height: 500px;
+  width: 90%;
+  max-width: var(--globalMaxWidth);
+  margin: 50px auto;
+  /* Text */
+  /* Decors */
+  /* Others */
+}
+#mainTimeCont {
+  /* Position */
+  /* Size, Margin & Padding */
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  /* Text */
+  text-align: center;
+  /* Decors */
+  background-color: var(--digWatch);
+  border-radius: 5px;
+  /* Others */
+}
+#mainTime {
+  /* Position */
+  /* Size, Margin & Padding */
+  /* Text */
+  text-align: center;
+  font-size: 50px;
+  /* Decors */
+  /* Others */
+  display: flex;
+  justify-content: space-between;
+}
+#watchContainerC {
+  /* Position */
+  /* Size, Margin & Padding */
+  min-height: 200px;
+  margin-top: 25px;
+  padding: 10px 5px;
+  /* Text */
+  /* Decors */
+  /* Others */
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  gap: 25px;
+}
+.watchContainerC2 {
+  /* Position */
+  /* Size, Margin & Padding */
+  height: 175px;
+  flex: 0 0 175px;
+  /* Text */
+  text-align: center;
+  /* Decors */
+  background-color: var(--digWatch);
+  border-radius: 5px;
+  /* Others */
+}
+.loct {
+  height: 50px;
+  display: grid;
+  place-content: center;
+}
+.time {
+  height: 75px;
+  font-size: 30px;
+}
