@@ -1,0 +1,87 @@
+#randCont {
+  height: max-content;
+  width: 100%;
+  max-width: 1500px;
+  margin: 50px auto;
+  padding: 0 25px;
+  text-align: center;
+}
+#descrip {
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+}
+.numSel {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px 25px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  display: grid;
+  row-gap: 15px;
+}
+#randMin, #randMax {
+  margin-top: 10px;
+  font-size: 17px;
+  width: 100%;
+  color: white;
+  background-color: rgb(100, 100, 100);
+  padding: 7px;
+}
+#randBttn {
+  /* Position */
+  /* Size, Margin & Padding */
+  height: 30px;
+  width: 210px;
+  margin: 15px auto;
+  /* Text */
+  color: var(--blueContrast);
+  font-size: 18px;
+  /* Decors */
+  background-color: black;
+  border: 1px solid var(--blueContrast);
+  border-radius: 2px;
+  /* Others */
+}
+#randBttn:hover {
+  color: black;
+  background-color: var(--blueContrast);
+  cursor: pointer;
+}
+#randNumText {
+  width: 90%;
+  max-width: 200px;
+  margin: 25px auto;
+  padding: 25px;
+  font-size: 35px;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+}
+#errorTxt {
+  /* Position */
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 200px;
+  /* Size, Margin & Padding */
+  height:max-content;
+  min-height: 30px;
+  max-width: max-content;
+  margin: auto;
+  padding: 5px 20px;
+  /* Text */
+  font-size: 18px;
+  /* Decors */
+  background-color: black;
+  /* Others */
+  display: none;
+}
+#secsTxt {
+  color: red;
+}

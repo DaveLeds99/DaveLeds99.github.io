@@ -1,0 +1,85 @@
+#slides {
+  height: auto;
+  width: 90%;
+  min-width: 290px;
+  max-width: 1000px;
+  margin: 45px auto 10px auto;
+}
+.quotesCont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: black;
+  color: white; 
+  border-radius: 7px;
+  padding: 3px 7px;
+}
+.quotesCont > span {
+  flex: 1 0 250px;
+  width: 60%;
+}
+.quotsImg {
+  flex: 1 0.5 200px;
+  width: 30%;
+  max-width: 250px;
+  object-fit: contain;
+}
+.author {
+  font-weight: bold;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+#timerCont {
+  width: 250px;
+  height: 15px;
+  margin: 0 auto;
+  padding: 0 5px;
+  background-color: black;
+  display: grid;
+  align-items: center;
+}
+#timerDisplay {
+  height: 7px;
+  background-color: wheat;
+  border-radius: 15px;
+  transition: all 0.9s;
+}
+#randBttn {
+  /* Position */
+  margin: 25px auto 75px auto;
+  /* Size */
+  height: 50px;
+  width: 200px;
+  /* Text */
+  font-size: 16px;
+  color: white;
+  /* Border & Background */
+  background-color: black;
+  border: 2px solid var(--BttnBorder);
+  border-radius: 5px;
+  /* Others */
+  display: block;
+}
+#randBttn:hover {
+  cursor: pointer;
+  border-color: white;
+  background-color: rgb(10, 10, 10);
+}
+
+
+
+/* MEDIAS MEDIAS MEDIAS */
+/* TABLETS - 800px -- */
+@media (max-width: 800px) {
+  .quotsImg {
+    max-width: 150px;
+  }
+}

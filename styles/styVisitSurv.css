@@ -1,0 +1,64 @@
+#description {
+  text-align: center;
+  font-size: 20px;
+}
+#survey-form {
+  width: 75%;
+  max-width: 750px;
+  margin: 25px auto 75px auto;
+  background-color:rgb(0, 75, 150);
+  padding: 5px 35px;
+  border-radius: 5px;
+  color: white;
+}
+.elementGroup {
+  margin-bottom: 25px;
+}
+input,select, textarea {
+  width: 100%;
+  max-width: calc(100% - 5px);
+  margin: 5px;
+  padding: auto 10px;
+  background: rgb(200, 200, 200);
+  height: 25px;
+}
+input[name="news"], input[type="checkbox"] {
+  width: unset;
+  vertical-align: middle;
+}
+textarea {
+  height: fit-content;
+  padding: 5px 10px;
+}
+.buttCont {
+  height: 50px;
+  width: 50%;
+  min-width: 150px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+#submit {
+  height: 50px;
+  width: 150px;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border: 5px solid var(--blueContrast);
+  border-radius: 5px;
+}
+#submit:hover {
+  cursor: pointer;
+  border-color: white;
+}
+
+
+
+/* MEDIAS MEDIAS MEDIAS */
+/* TABLETS (800px --) */
+@media (max-width: 800px) { 
+  #survey-form {
+    width: 90%;
+    padding: 5px 10px;
+  }
+}

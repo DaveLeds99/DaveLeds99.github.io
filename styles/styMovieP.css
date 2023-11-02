@@ -1,0 +1,157 @@
+.slides{
+  text-align: center;
+  margin-top: 15px;
+}
+.movieCont {
+  height: auto;
+  width: 90%;
+  min-width: 300px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  display: none;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.movieImg{
+  width: max(90%, 80%);
+  object-fit: contain;
+  opacity: 0.8;
+  border: 5px double rgb(100, 100, 100);
+  border-radius: 25px;
+}
+.movieText {
+  height: 10px;
+  position: relative;
+  bottom: 180px;
+  width: 100%;
+  padding: 0 15%;
+  font-size: 20px;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+.Phrs {
+  font-weight: bold;
+  text-align: left;
+}
+.Autr {
+  text-align: right;
+}
+.slideSel {
+  height: 60px;
+  min-width: 250px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.selImg {
+  margin: 0 2px;
+  height: 100%;
+  width: 90px;
+  border: 1px solid var(--blueContrast);
+  border-radius: 5px;
+  opacity: 0.5;
+}
+.selImg:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  border: 2px solid var(--blueContrast);
+}
+.prev, .next {
+  position: relative;
+  top: -30%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.8);
+}
+.active {
+  border: 1px solid white;
+  opacity: 1;
+}
+#timerCont {
+  position: relative;
+  top: -30px;
+  height: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin: 15px auto 0 auto;
+  background-color: grey;
+  border-radius: 25px;
+  padding: 2px;
+}
+#timerDisplay {
+  height: 100%;
+  background-color: black;
+  border-radius: 50px;
+  width: 0;
+  transition: all 0.75s;
+}
+#slideSelmob {
+  display: none;
+  margin: 5px auto 50px auto;
+  height: auto;
+  width: 100%;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+}
+.selMob {
+  height: 30px;
+  width: 150px;
+  color: white;
+  border: 1px solid var(--blueContrast);
+  background-color: black;
+  border-radius: 5px;
+}
+.selMob:hover {
+  border-color: white;
+}
+
+
+
+
+
+/* MEDIAS MEDIAS MEDIAS */
+/*TABLET (615px - 768px)*/
+@media (max-width: 768px) and (min-width: 615px) {
+  .movieText {
+    padding: 0 8%;
+    bottom: 150px;
+    font-size: 16px;
+  }
+}
+/* MOBILE - 614px */
+@media (max-width: 614px) {
+  .movieText {
+    font-size: 11px;
+    bottom: 115px;
+    padding: 0 25px;
+  }
+  .slideSel {
+    display: none;
+  }
+  #slideSelmob {
+    display: grid;
+  }
+}

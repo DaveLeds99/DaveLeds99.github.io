@@ -1,0 +1,102 @@
+#mainCont {
+  /* Position */
+  /* Size, Margin & Padding */
+  min-height: 200px;
+  width: 90%;
+  max-width: var(--globalMaxWidth);
+  margin: 75px auto 150px auto;
+  /* Text */
+  color: white;
+  /* Decors */
+  /* Others */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 50px;
+}
+.contB {
+  /* Position */
+  /* Size, Margin & Padding */
+  min-height: 180px;
+  flex: 0.25 0 300px;
+  padding: 15px 25px;
+  /* Text */
+  text-align: center;
+  /* Decors */
+  background-color: rgba(40, 40, 40, 0.35);
+  border-radius: 15px;
+  /* Others */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.title {
+  width: 100%;
+  margin: 0 auto 5px auto;
+}
+.disclaimer {
+  font-size: 12px;
+}
+#plrOptsCont {
+  /* Position */
+  /* Size, Margin & Padding */
+  width: 100%;
+  /* Text */
+  /* Decors */
+  /* Others */
+  align-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.plrOption {
+  border: 1px solid var(--blueContrast);
+  padding: 0 5px;
+  background-color: rgb(80, 80, 80);
+}
+.plrOption:hover {
+  cursor: pointer;
+  background-color: var(--blueContrast);
+}
+.optionName {
+  width: 60px;
+  margin: 5px auto;
+  text-align: center;
+}
+.optionImg {
+  width: 100%;
+  max-width: 75px; 
+  background-color: rgb(150, 150, 150);
+  border-radius: 5px;
+}
+#result {
+  height: 40px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 25px 25px 0 0;
+  display: grid;
+  place-content: center;
+}
+.LColor {
+  background-color: red;
+}
+.NeutralColor {
+  background-color: rgb(100, 100, 100);
+}
+.WColor {
+  background-color: green;
+}
+#resultBoxesCont {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  background-color: black;
+  border-radius: 0 0 25px 25px;
+  padding: 5px 0;
+}
+#resultBoxesCont p {
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
